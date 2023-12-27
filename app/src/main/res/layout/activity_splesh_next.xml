@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpleshNextActivity"
+    android:orientation="vertical"
+    android:weightSum="4"
+    android:background="#dff3ff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="2.3"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/spleshnext"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome"
+            android:fontFamily="@font/poppinsreg"
+            android:textStyle="bold"
+            android:textColor="#25303e"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Generic Aadhaar Based \nFace Authentication"
+            android:fontFamily="@font/poppinsreg"
+            android:textColor="#6e7b88"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.7"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_kiosk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Registration as e-Kiosk"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppinsreg"
+            android:backgroundTint="#32b768"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"></Button>
+
+        <Button
+            android:id="@+id/btn_beneficary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Registration as Beneficiary"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppinsmed"
+            android:backgroundTint="#32b768"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginTop="10dp"></Button>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppinsmed"
+            android:backgroundTint="#c6f2db"
+            android:textColor="#32b768"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginTop="10dp"></Button>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="By Logging in or Registering you have agreed to terms and conditions and privacy policy "
+            android:fontFamily="@font/poppinsreg"
+            android:textStyle="bold"
+            android:textColor="#6e7b88"
+            android:textSize="12dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="15dp"></TextView>
+
+    </LinearLayout>
+
+</LinearLayout>

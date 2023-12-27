@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BeneficiaryRegistrationActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            app:titleTextColor="#ffffff"
+            android:background="@color/design_default_color_primary"
+            android:outlineSpotShadowColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:weightSum="3"
+                android:layout_marginTop="20dp">
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    android:scaleType="centerInside"
+                    android:layout_marginRight="5dp"
+                    android:background="?attr/selectableItemBackground"></ImageView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="Emitra Kiosk Registration"
+                    android:fontFamily="@font/poppinsblack"
+                    android:textSize="15dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/white"></TextView>
+
+                <ImageView
+                    android:visibility="gone"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:id="@+id/iv_logout"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logout"
+                    android:scaleType="centerInside"
+                    android:layout_marginRight="5dp"
+                    app:tint="@color/white"></ImageView>
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="3"
+        android:orientation="vertical"
+        android:background="#365abc">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight=".7"
+            android:background="@drawable/facescan">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="2.3"
+            android:background="@drawable/llstyle">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_sso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                android:translationZ="5dp"
+                android:clickable="true"
+                app:cardCornerRadius="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:fontFamily="@font/poppinsreg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Registration as e-Mitra Kiosk"
+                        android:textStyle="bold"
+                        android:textColor="#32b768"
+                        android:textSize="15dp"></TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginTop="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="5"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp">
+
+                            <EditText
+                                android:fontFamily="@font/poppinsreg"
+                                android:layout_width="0dp"
+                                android:layout_weight="3.5"
+                                android:layout_height="wrap_content"
+                                android:hint="enter sso id"
+                                android:id="@+id/et_ssoid"
+                                android:paddingLeft="10dp"
+                                android:imeOptions="actionDone"
+                                android:singleLine="true"
+                                android:background="@drawable/edittextback"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:textSize="15dp"></EditText>
+
+
+                            <Button
+                                android:id="@+id/btn_fetch"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:text="Get Details"
+                                android:fontFamily="@font/poppinsreg"
+                                android:backgroundTint="#32b768"
+                                android:textColor="@color/white"
+                                android:textAllCaps="false"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:textSize="8dp"></Button>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:visibility="gone"
+                android:id="@+id/cv_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                android:translationZ="5dp"
+                android:clickable="true"
+                app:cardCornerRadius="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="15dp">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+
+<!--                        <TextView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Select Kiosk ID"-->
+<!--                            android:fontFamily="@font/poppinsreg"-->
+<!--                            android:textColor="#000000"></TextView>-->
+<!--                        <Spinner-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:id="@+id/spi_kioskcode"-->
+<!--                            android:paddingLeft="5dp"-->
+<!--                            android:paddingRight="5dp"-->
+<!--                            android:background="@drawable/edittextbackground"></Spinner>-->
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/text_font_color"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:id="@+id/et_kioskcode"
+                                android:inputType="text"
+                                android:hint="Kiosk Code"
+                                android:enabled="false"
+                                android:drawablePadding="8dp"
+                                android:fontFamily="@font/poppinsreg"
+                                android:textColor="@color/text_font_color"
+                                android:textColorHint="@color/text_font_color"
+                                android:textSize="12dp"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:id="@+id/ll_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/text_font_color"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:id="@+id/et_kioskname"
+                                android:inputType="text"
+                                android:hint="Kiosk Name"
+                                android:enabled="false"
+                                android:drawablePadding="8dp"
+                                android:fontFamily="@font/poppinsreg"
+                                android:textColor="@color/text_font_color"
+                                android:textColorHint="@color/text_font_color"
+                                android:textSize="12dp"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            app:boxStrokeColor="@color/black"
+                            android:textColorHint="@color/text_font_color"
+                            >
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:id="@+id/et_mobile"
+                                android:inputType="text"
+                                android:hint="Mobile"
+                                android:enabled="false"
+                                android:drawablePadding="8dp"
+                                android:fontFamily="@font/poppinsreg"
+                                android:textColor="@color/text_font_color"
+                                android:textColorHint="@color/text_font_color"
+                                android:textSize="12dp"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="3"
+                            android:gravity="center">
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                app:boxStrokeColor="@color/black"
+                                android:textColorHint="@color/text_font_color"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:id="@+id/et_aadhaar"
+                                    android:inputType="text"
+                                    android:hint="Ref/Aadhaar number"
+                                    android:enabled="false"
+                                    android:drawablePadding="8dp"
+                                    android:fontFamily="@font/poppinsreg"
+                                    android:textColor="@color/text_font_color"
+                                    android:textColorHint="@color/text_font_color"
+                                    android:textSize="12dp"
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Button
+                                android:id="@+id/btn_genotp"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="60dp"
+                                android:text="GET OTP"
+                                android:fontFamily="@font/poppinsreg"
+                                android:backgroundTint="#32b768"
+                                android:textColor="@color/white"
+                                android:textAllCaps="false"
+                                android:layout_marginTop="2dp"></Button>
+                        </LinearLayout>
+
+                        <CheckBox
+                            android:id="@+id/checkbox"
+                            style="?android:attr/textAppearanceMedium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppinsreg"
+                            android:textSize="10dp"/>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:id="@+id/ll_otp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:gravity="center">
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                app:boxStrokeColor="@color/black"
+                                android:textColorHint="@color/text_font_color"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/et_aadhaarotp"
+                                    android:inputType="number"
+                                    android:maxLength="6"
+                                    android:hint="Aadhaar OTP"
+                                    android:enabled="true"
+                                    android:drawablePadding="8dp"
+                                    android:fontFamily="@font/poppinsreg"
+                                    android:textColor="@color/text_font_color"
+                                    android:textColorHint="@color/text_font_color"
+                                    android:textSize="15dp"
+                                    />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Button
+                                android:id="@+id/btn_authotp"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="60dp"
+                                android:text="Verify OTP"
+                                android:fontFamily="@font/poppinsreg"
+                                android:backgroundTint="#32b768"
+                                android:textColor="@color/white"
+                                android:textAllCaps="false"
+                                android:layout_marginTop="2dp"></Button>
+                        </LinearLayout>
+
+                        <Button
+                            android:enabled="false"
+                            android:id="@+id/btn_registerkiosk"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/mdtp_white"
+                            android:text="Register as e-Mitra kiosk"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            android:gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:textAllCaps="false"
+                            android:backgroundTint="@color/buttoncolor2"
+                            android:fontFamily="@font/poppinsreg"
+                            android:layout_marginBottom="30dp"/>
+                    </LinearLayout>
+                </ScrollView>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

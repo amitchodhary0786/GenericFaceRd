@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/dialogback"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/successicon"
+            app:layout_constraintBottom_toTopOf="@+id/tv_titlemsg"
+            tools:ignore="MissingConstraints"></ImageView>
+
+        <TextView
+            android:id="@+id/tv_titlemsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsreg"
+            android:text="Success"
+            android:textColor="#2e3949"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            tools:ignore="DuplicateIds,MissingConstraints"
+            android:layout_marginTop="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/tv_bodymsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsreg"
+            android:gravity="center"
+            android:text="Registration Success"
+            android:textColor="#2e3949"
+            android:textSize="20dp"
+            tools:ignore="MissingConstraints"></TextView>
+
+        <Button
+            android:id="@+id/btn_dilog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#32b768"
+            android:fontFamily="@font/poppinsreg"
+            android:text="LogIn"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"></Button>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
